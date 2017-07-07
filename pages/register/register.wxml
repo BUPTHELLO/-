@@ -1,0 +1,9 @@
+<view class="container register">
+    <button bindtap="Location0" > 校方寄存行李处 </button>
+    <button bindtap="Location1" > 体育馆签到 </button>
+    <button bindtap="Location2" > 领取体检表 </button>
+    <button bindtap="Location3" > 校医院 </button>
+    <button bindtap="Location4" > 补交学费 </button>
+    <button bindtap="Location5" > 搭乘校车处 </button>
+    <button bindtap="chooseLocation" > 导航 </button>
+</view>

@@ -1,0 +1,74 @@
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'off'}}" 
+        data-current="0" bindtap="swichNav">物品清单</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : 'off'}}" 
+        data-current="1" bindtap="swichNav">备忘录</view>
+</view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:1090rpx" bindchange="bindChange">  
+    <!-- 物品清单 -->  
+    <swiper-item class="container">  
+        <!-- 清单选项 -->  
+        <view class="list-row">
+            <view class="list-type" bindtap="type1" style="background: #777777">重要材料</view>
+            <view class="list-type" bindtap="type2" style="background: #888888">随身衣物</view>
+            <view class="list-type" bindtap="type3" style="background: #999999">电子产品</view>
+            <view class="list-type" bindtap="type4" style="background: #aaaaaa">医药用品</view>
+        </view>
+        <view class="list-row">
+            <view class="list-type" bindtap="type5" style="background: #bbbbbb">床上用品</view>
+            <view class="list-type" bindtap="type6" style="background: #cccccc">日常用品</view>
+            <view class="list-type" bindtap="type7" style="background: #dddddd">学习用品</view>
+            <view class="list-type" bindtap="type8" style="background: #eeeeee">公共用品</view>
+        </view>
+        <!-- 具体内容 -->
+        <scroll-view class="item" scroll-y="true" style="height: 890rpx">
+            <!-- 每个条目的配置 -->
+            <view wx:for="{{list}}" class="list-item" data-index="{{index}}">
+                <!-- 文字部分 -->
+                <text class="list-article">{{item.article}}</text>
+                <!-- 按钮部分 -->
+                <button class="list-btn" wx:if="{{item.hidden}}" bindtap="chooseItem" 
+                    hidden="{{item.hidden}}" data-index="{{index}}">+</button>
+                <button class="list-btn" wx:else bindtap="chooseItem" 
+                    hidden="{{item.hidden}}" data-index="{{index}}">+</button>
+            </view>
+        </scroll-view>
+
+    </swiper-item>  
+
+    <!-- 备忘录 -->  
+    <swiper-item>
+        <!-- 滑动窗口 -->
+        <scroll-view class="container memory" scroll-y="true" style="height: 1120rpx">
+            <!-- 每个条目的配置 -->
+            <view wx:for="{{piece}}" class="piece-item" style="background:{{item.color==0 ? '#ff0000' : '#00ff00'}}" 
+                bindlongtap="bindViewTap" data-index="{{index}}">
+                <!-- 图标部分 -->
+                <icon class="piece-btn" wx:if="{{item.selected}}" type="success_circle" 
+                    size="25" bindtap="bindCheckbox" data-index="{{index}}"/>
+                <icon class="piece-btn" wx:else type="circle" size="25" bindtap="bindCheckbox" 
+                    data-index="{{index}}"/>
+                <!-- 文字部分 -->
+                <text class="piece-article">{{item.article}}</text>
+            </view>
+        </scroll-view>
+        <!-- 添加按钮 -->
+        <view class="add" bindtap="addHandle">+</view>
+        <!-- 输入框配置 -->
+        <modal title="请输入物品名称" no-cancel="true" bindconfirm="modalChange" hidden="{{modalHidden}}">
+            <view class="input">
+            <input class="i-input" type="text" bindchange="inputChange" 
+                placeholder="此处不能为空" value="{{value}}" />
+            </view>
+        </modal>
+        <!-- 操作框配置 -->
+        <action-sheet hidden="{{actionHidden}}">
+            <block wx:for="{{actionSheetItems}}">
+                <action-sheet-item class="item" bindtap="itemPiece" data-index="{{index}}">{{item}}</action-sheet-item> 
+            </block>
+            <action-sheet-cancel class="cancel" bindtap="cancelPiece">取消</action-sheet-cancel>
+        </action-sheet>
+        
+    </swiper-item>
+</swiper>  

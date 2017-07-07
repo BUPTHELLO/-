@@ -1,0 +1,14 @@
+page{
+  height: 100%;
+}
+.clearfix{
+  zoom: 1;
+}
+.clearfix:after{
+  content:'';
+  display: table;
+  clear:both;
+}
+.hide{
+  display: none !important;
+}
