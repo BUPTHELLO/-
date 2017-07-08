@@ -1,7 +1,7 @@
 
 <view class="container index">
     <swiper class="swiper" indicator-dots="true" autoplay="true" 
-        interval="5000" duration="1000">  
+        interval="2000" duration="700">  
         <block wx:for="{{picture}}" wx:for-index="index">    
             <swiper-item>    
                 <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    

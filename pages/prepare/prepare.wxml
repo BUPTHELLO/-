@@ -5,33 +5,60 @@
         data-current="1" bindtap="swichNav">备忘录</view>
 </view>  
   
-<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:1090rpx" bindchange="bindChange">  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" 
+    style="height:1090rpx" bindchange="bindChange">  
     <!-- 物品清单 -->  
-    <swiper-item class="container">  
+    <swiper-item class="container list">  
         <!-- 清单选项 -->  
         <view class="list-row">
-            <view class="list-type" bindtap="type1" style="background: #777777">重要材料</view>
-            <view class="list-type" bindtap="type2" style="background: #888888">随身衣物</view>
-            <view class="list-type" bindtap="type3" style="background: #999999">电子产品</view>
-            <view class="list-type" bindtap="type4" style="background: #aaaaaa">医药用品</view>
+            <view class="list-type" bindtap="type1" style="background: #FF3366">
+                <view class="list-type-blank"></view>
+                <text class="list-type-text">重要\n材料</text>
+            </view>
+            <view class="list-type" bindtap="type2" style="background: #CC6666">
+                <view class="list-type-blank"></view>
+                <text class="list-type-text">随身\n衣物</text>
+            </view>
+            <view class="list-type" bindtap="type3" style="background: #66CCCC">
+                <view class="list-type-blank"></view>
+                <text class="list-type-text">电子\n产品</text>
+            </view>
+                <view class="list-type" bindtap="type4" style="background: #3366FF">
+            <view class="list-type-blank"></view>
+                <text class="list-type-text">医药\n用品</text>
+            </view>
         </view>
         <view class="list-row">
-            <view class="list-type" bindtap="type5" style="background: #bbbbbb">床上用品</view>
-            <view class="list-type" bindtap="type6" style="background: #cccccc">日常用品</view>
-            <view class="list-type" bindtap="type7" style="background: #dddddd">学习用品</view>
-            <view class="list-type" bindtap="type8" style="background: #eeeeee">公共用品</view>
+            <view class="list-type" bindtap="type5" style="background: #FF3366">
+                <view class="list-type-blank"></view>
+                <text class="list-type-text">床上\n用品</text>
+            </view>
+            <view class="list-type" bindtap="type6" style="background: #CC6666">
+                <view class="list-type-blank"></view>
+                <text class="list-type-text">日常\n用品</text>
+            </view>
+            <view class="list-type" bindtap="type7" style="background: #66CCCC">
+                <view class="list-type-blank"></view>
+                <text class="list-type-text">学习\n用品</text>
+            </view>
+            <view class="list-type" bindtap="type8" style="background: #3366FF">
+                <view class="list-type-blank"></view>
+                <text class="list-type-text">公共\n用品</text>
+            </view>
         </view>
         <!-- 具体内容 -->
-        <scroll-view class="item" scroll-y="true" style="height: 890rpx">
+        <scroll-view class="item" scroll-y="true" style="height: 750rpx">
             <!-- 每个条目的配置 -->
             <view wx:for="{{list}}" class="list-item" data-index="{{index}}">
                 <!-- 文字部分 -->
                 <text class="list-article">{{item.article}}</text>
                 <!-- 按钮部分 -->
-                <button class="list-btn" wx:if="{{item.hidden}}" bindtap="chooseItem" 
-                    hidden="{{item.hidden}}" data-index="{{index}}">+</button>
-                <button class="list-btn" wx:else bindtap="chooseItem" 
-                    hidden="{{item.hidden}}" data-index="{{index}}">+</button>
+                <image class="list-img" wx:if="{{item.hidden}}" bindtap="chooseItem" 
+                    hidden="{{item.hidden}}" src="../../image/icon/plus+.png
+                    data-index="{{index}}">+</image>
+                <image class="list-img" wx:else bindtap="chooseItem" 
+                    hidden="{{item.hidden}}" src="../../image/icon/plus+.png
+                    data-index="{{index}}">+</image>
             </view>
         </scroll-view>
 
@@ -42,7 +69,7 @@
         <!-- 滑动窗口 -->
         <scroll-view class="container memory" scroll-y="true" style="height: 1120rpx">
             <!-- 每个条目的配置 -->
-            <view wx:for="{{piece}}" class="piece-item" style="background:{{item.color==0 ? '#ff0000' : '#00ff00'}}" 
+            <view wx:for="{{piece}}" class="piece-item" style="background:{{item.color==0 ? '#FF6666' : '#33FF66'}}" 
                 bindlongtap="bindViewTap" data-index="{{index}}">
                 <!-- 图标部分 -->
                 <icon class="piece-btn" wx:if="{{item.selected}}" type="success_circle" 
@@ -58,8 +85,8 @@
         <!-- 输入框配置 -->
         <modal title="请输入物品名称" no-cancel="true" bindconfirm="modalChange" hidden="{{modalHidden}}">
             <view class="input">
-            <input class="i-input" type="text" bindchange="inputChange" 
-                placeholder="此处不能为空" value="{{value}}" />
+                <input class="i-input" type="text" bindchange="inputChange" 
+                    placeholder="此处不能为空" value="{{value}}" />
             </view>
         </modal>
         <!-- 操作框配置 -->

@@ -3,7 +3,8 @@ Page({
         markers: [],
         param: {},
         keyword: "",
-        ty: "",
+        containerShow: true,
+        searchPanelShow: false,
     },
 
     onReady: function (e) {
@@ -11,7 +12,7 @@ Page({
         this.mapCtx = wx.createMapContext('myMap')
     },
 
-    getSchoolMarkers() {
+    getMarkers() {
         let markers = [];
         for (let i = 0; i <= 9; i++) {
             let marker = this.createMarker(this.data.param[i]);
@@ -23,7 +24,7 @@ Page({
     //传入参数为object类型
     createMarker(point) {
         let marker = {
-            iconPath: "/image/scenery/location.png",
+            iconPath: "/image/icon/location.png",
             id: point.id,
             name: point.name + point.tel,
             latitude: point.latitude,
@@ -34,17 +35,12 @@ Page({
         return marker;
     },
 
-    bindKeyInput: function (e) {
-        //console.log(e);
-        this.setData({
-            ty: e.detail.value
-        })
-    },
-
-    bindbtn: function (e) {
+    onbtnconfirm: function (e) {
         var that = this;
+        var text = e.detail.value;
+        console.log(text);
         this.setData({
-            keyword: this.data.ty
+            keyword: text,
         })
 
         // 引入SDK核心类
@@ -59,7 +55,7 @@ Page({
         var object = {};
         // 调用接口
         demo.search({
-            keyword: that.data.ty,
+            keyword: that.data.keyword,
             success: function (res) {
                 for (var index = 0; index <= 9; index++) {
                     object = {
@@ -73,7 +69,7 @@ Page({
                     param[index] = object;
                 }
                 that.setData({ param });
-                that.setData({ markers: that.getSchoolMarkers() });
+                that.setData({ markers: that.getMarkers() });
             }
         });
     }

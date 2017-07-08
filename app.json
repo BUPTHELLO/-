@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/register/register",
     "pages/prepare/prepare",
+    "pages/register/register",
     "pages/nearby/nearby"
   ],
   "window":{
