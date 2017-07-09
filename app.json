@@ -1,15 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/prepare/prepare",
     "pages/register/register",
+    "pages/prepare/prepare",
     "pages/nearby/nearby"
   ],
-  "window":{
-    "backgroundTextStyle":"black",
+  "window": {
+    "backgroundTextStyle": "black",
     "navigationBarBackgroundColor": "#000000",
     "navigationBarTitleText": "北邮人入学",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "debug": true
 }

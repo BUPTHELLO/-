@@ -1,9 +1,66 @@
-<view class="container register">
-    <button bindtap="Location0" > 校方寄存行李处 </button>
-    <button bindtap="Location1" > 体育馆签到 </button>
-    <button bindtap="Location2" > 领取体检表 </button>
-    <button bindtap="Location3" > 校医院 </button>
-    <button bindtap="Location4" > 补交学费 </button>
-    <button bindtap="Location5" > 搭乘校车处 </button>
-    <button bindtap="chooseLocation" > 导航 </button>
+
+<view class="container">
+  <view class="tip">
+    <text class="text">1</text>
+    <image src="http://www.bupt.edu.cn/upload/image/201411/%E5%8C%97%E9%82%AE%E9%A3%8E%E5%85%89_20141125_%E6%98%8E%E4%BF%A1%E7%89%87%E7%AC%AC%E4%B8%80%E5%A5%97_12.jpg" class="img"></image>
+    <!--<image src="src" class="img1"></image>-->
+    <view class="btn">
+      <button class="detail" bindtap="info0">详情</button>
+      <button class="map" bindtap="Location0">导航</button>
+    </view>
+  </view> 
+
+  <view class="tip">
+    <text class="text">1</text>
+    <image src="http://www.bupt.edu.cn/upload/image/201411/%E5%8C%97%E9%82%AE%E9%A3%8E%E5%85%89_20141125_%E6%98%8E%E4%BF%A1%E7%89%87%E7%AC%AC%E4%B8%80%E5%A5%97_04.jpg" class="img"></image>
+    <!--<image src="src" class="img1"></image>-->
+    <view class="btn">
+      <button class="detail" bindtap="info1">详情</button>
+      <button class="map" bindtap="Location1">导航</button>
+    </view>
+  </view> 
+
+
+    <view class="tip">
+    <text class="text">1</text>
+    <image src="http://www.bupt.edu.cn/upload/image/201704/2%20%E6%95%99%E4%B8%89%E6%A5%BC%20%E6%AD%A3%E9%9D%A2.jpg" class="img"></image>
+    <!--<image src="src" class="img1"></image>-->
+    <view class="btn">
+      <button class="detail" bindtap="info2">详情</button>
+      <button class="map" bindtap="Location2">导航</button>
+    </view>
+  </view> 
+
+    <view class="tip">
+    <text class="text">1</text>
+    <image src="http://img.edushi.com/userupImages/pic_beijing/2074/DSCN0131.JPG" class="img"></image>
+    <!--<image src="src" class="img1"></image>-->
+    <view class="btn">
+      <button class="detail" bindtap="info3">详情</button>
+      <button class="map" bindtap="Location3">导航</button>
+    </view>
+  </view> 
+
+    <view class="tip">
+    <text class="text">1</text>
+    <image src="http://www.bupt.edu.cn/upload/image/201411/%E5%8C%97%E9%82%AE%E9%A3%8E%E5%85%89_20141125_%E6%98%8E%E4%BF%A1%E7%89%87%E7%AC%AC%E4%B8%80%E5%A5%97_12.jpg" class="img"></image>
+    <!--<image src="src" class="img1"></image>-->
+    <view class="btn">
+      <button class="detail" bindtap="info4">详情</button>
+      <button class="map" bindtap="Location4">导航</button>
+    </view>
+  </view> 
+
+    <view class="tip">
+    <text class="text">1</text>
+    <image src="http://www.bupt.edu.cn/upload/image/201411/%E5%8C%97%E9%82%AE%E9%A3%8E%E5%85%89_20141125_%E6%98%8E%E4%BF%A1%E7%89%87%E7%AC%AC%E4%B8%80%E5%A5%97_06.jpg" class="img"></image>
+    <!--<image src="src" class="img1"></image>-->
+    <view class="btn">
+      <button class="detail" bindtap="info5">详情</button>
+      <button class="map" bindtap="Location5">导航</button>
+    </view>
+  </view> 
+
+<button bindtap="chooseLocation">导航</button>
 </view>
+
