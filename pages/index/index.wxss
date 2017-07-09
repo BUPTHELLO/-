@@ -1,82 +1,77 @@
+.container{
+    height: 100%;
+    width: 100%;
+}
 .swiper {
-  height: 650rpx;
-  width: 100%;
+    height: 650rpx;
+    width: 100%;
 }
-
 .swiper image {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
-
 .reg {
-  margin-top: 20px;
-  margin-left: 15px;
-  width: 90%;
-  letter-spacing: 3px;
-  font-family: "黑体";
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;   
-  text-decoration: none;
-  outline: none;
-  color: #000;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 50px;
+    width: 90%;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;   
+    outline: none;
+    background-color: #09BB77;
+    border: none;
+    border-radius: 20px;
 }
-
-.reg:hover {background-color: #3e8e41}
-
+.reg:hover {background-color: #09BB77}
 .reg:active {
-  background-color: #3e8e41;
-  transform: translateY(1px);
+    background-color: #09BB77;
+    transform: translateY(1px);
 }
-
 .pre {
-  margin-top: 20px;
-  margin-left: 15px;
-  width: 90%;
-  letter-spacing: 3px;
-  font-family: "黑体";
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;   
-  text-decoration: none;
-  outline: none;
-  color: #000;
-  background-color: #ff0;
-  border: none;
-  border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 50px;
+    width: 90%;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;   
+    outline: none;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 20px;
 }
+.pre:hover {background-color: #FFA500}
 
-.pre:hover {background-color: #ff0}
-
-.pre:active {
-  background-color: #ff0;
-  transform: translateY(1px);
+    .pre:active {
+    background-color: #FFA500;
+    transform: translateY(1px);
 }
-
 .nea {
-margin-top: 20px;
-  margin-left: 15px;
-  width: 90%;
-  letter-spacing: 3px;
-  font-family: "黑体";
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;   
-  text-decoration: none;
-  outline: none;
-  color: #000;
-  background-color: #6495ed;
-  border: none;
-  border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 50px;
+    width: 90%;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;   
+    outline: none;
+    background-color: #3399FF;
+    border: none;
+    border-radius: 20px;
 }
-
-.nea:hover {background-color: #6495ed}
-
+.nea:hover {background-color: #3399FF}
 .nea:active {
-  background-color: #6495ed;
-  transform: translateY(1px);
+    background-color: #3399FF;
+    transform: translateY(1px);
+}
+.text{
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-family: "黑体";
+    text-decoration: none;
+    color: #000;
+}
+.blank{
+    height: 15px;
 }

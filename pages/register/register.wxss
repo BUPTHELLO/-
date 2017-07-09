@@ -1,40 +1,77 @@
 .container{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;  
     width:100%; 
+    background-color: #CCFF99;
 }
 .tip{
-  display:flex;
-  flex-direction: row;
-  border: groove;
-  border-color: gainsboro;
-  margin-top: 5px;
-  border-radius: 150px;
-  height: 61.8%;
-  width :100%
+    display:flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 50px;
+    background-color: #CCCCCC;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 100px;
+}
+.text-bg{
+    border: none;
+    border-radius: 40px;
+    height: 80px;
+    width: 80px;
+    background-color: #66DD77;
+    text-align: center; 
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.text-bk{
+    height: 15px;
 }
 .text{
-  
+    font-size: 40px; 
+    /*font-family: "华文彩云";*/
+    color: #ffffff;
 }
-.img{
-height: 135px;
-width:150px;
-}
-
 .btn{
-  display:flex;
-  flex-direction: column;
-  margin-left: 10px;
-  width:40%;
+    display:flex;
+    flex-direction: column;
+    width:50%;   
 }
 .detail{
- margin-top: 5px;
- margin-right: 5px;
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #FF9966;
+    font-family: "幼圆";
+    color: #ffffff;
 }
 .map{
- margin-top: 40px;
- margin-right: 5px;
+    width: 80px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: #3399FF;
+    font-family: "幼圆";
+    color: #ffffff;
+}
+.img{
+    border: none;
+    border-radius: 40px;
+    height: 80px;
+    width: 80px;
+    margin-top:10px;
+    margin-right: 10px;
 }

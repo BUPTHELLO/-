@@ -69,7 +69,7 @@
         <!-- 滑动窗口 -->
         <scroll-view class="container memory" scroll-y="true" style="height: 1120rpx">
             <!-- 每个条目的配置 -->
-            <view wx:for="{{piece}}" class="piece-item" style="background:{{item.color==0 ? '#FF6666' : '#33FF66'}}" 
+            <view wx:for="{{piece}}" class="piece-item" style="background:{{item.color==0 ? '#FF6666' : '#99CC33'}}" 
                 bindlongtap="bindViewTap" data-index="{{index}}">
                 <!-- 图标部分 -->
                 <icon class="piece-btn" wx:if="{{item.selected}}" type="success_circle" 

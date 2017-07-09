@@ -1,5 +1,4 @@
-
-<view class="container index">
+<view class="container">
     <swiper class="swiper" indicator-dots="true" autoplay="true" 
         interval="2000" duration="700">  
         <block wx:for="{{picture}}" wx:for-index="index">    
@@ -9,11 +8,20 @@
         </block>    
     </swiper>  
 
-    <button class="reg" type="defaule" bindtap="register">开始报到</button>
+    <view class="reg" bindtap="register">
+        <view class="blank"></view>
+        <text class="text">开始报到</text>
+    </view>
 
-    <button class="pre" type="defaule" bindtap="prepare">入学准备</button>
+    <view class="pre" bindtap="prepare">
+        <view class="blank"></view>
+        <text class="text">入学准备</text>
+    </view>
 
-    <button class="nea" type="defaule" bindtap="nearby">北邮周围</button>
+    <view class="nea" bindtap="nearby">
+        <view class="blank"></view>
+        <text class="text">北邮周围</text>
+    </view>
 
 </view>
   
